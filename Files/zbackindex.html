@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Philadelphia Cuisine Map</title>
+
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+
+    <!-- Font Awesome CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="start-page">
+        <h1>Welcome to the Food Map of Philadelphia</h1>
+        <h2>Michael Andia | Blake Bartlett | Christopher Duke | Tim McCarthy | Krissina Wells</h2>
+        <img src="Files/cheesesteak.avif" alt="Philadelphia Cheesesteak" class="header-image"> <!-- AI Generated: Credit: Image by artblog201 on Freepik-->
+        <div class="thumbnail-container">
+            <div class="thumbnail-item">
+                <img class="start-thumbnail" src="Files/map_home.png" alt="Map Thumbnail">
+                <div class="view-text">View Map</div>
+            </div>
+            <div class="thumbnail-item">
+                <img class="start-thumbnail" src="Files/chart_home.png" alt="Chart Thumbnail">
+                <div class="view-text">View Charts</div>
+            </div>
+        </div>
+    </div> 
+    <div id="map-container">
+        <button id="back-button">Back to Home</button>
+        <div id="map"></div>
+        <div id="controls">
+            <label class="large-radio">
+                <input type="radio" name="layer" value="cuisine" id="cuisine" size="20"> Cuisine by Zip Code
+            </label>
+            <label class="large-radio">
+                <input type="radio" name="layer" value="restaurant" id="restaurant" size="20"> Restaurant Map
+            </label>
+            <label class="large-radio">
+                <input type="radio" name="layer" value="review" id="review" size="20"> Heat Map by Neighborhood
+            </label>
+        </div>
+    </div>
+
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    <!-- D3 JavaScript -->
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="https://unpkg.com/leaflet.heat/dist/leaflet-heat.js"></script>
+    
+    <!-- Custom JS -->
+    <script src="app.js"></script>
+    <script>
+        document.querySelector('.thumbnail-item:first-child').addEventListener('click', function() {
+            document.getElementById('start-page').style.display = 'none';
+            document.getElementById('map-container').style.display = 'block';
+            document.getElementById('controls').style.display = 'block';
+        });
+        document.getElementById('back-button').addEventListener('click', function() {
+            document.getElementById('map-container').style.display = 'none';
+            document.getElementById('start-page').style.display = 'block';
+            document.getElementById('start-page').style.display = 'block';
+    });
+    </script>
+</body>
+
+</html>

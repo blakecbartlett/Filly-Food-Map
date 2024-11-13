@@ -1,0 +1,152 @@
+/* Opening page styling */
+#start-page {
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+}
+.start-thumbnail {
+    width: 300px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+#view-map-text {
+    font-size: 1.5rem; /* Adjust the font size as needed */
+    text-align: center;
+}
+#back-button {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    z-index: 1000; /* Ensure the button is on top */
+}
+header {
+    margin-bottom: 30px;
+}
+header h1 {
+    color: #000;
+    margin: 0;
+    font-size: 28px;
+    font-weight: bold;
+}
+.thumbnail-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.thumbnail-item {
+    margin: 20px;
+    transition: transform 0.3s ease;
+}
+.thumbnail-item:hover {
+    transform: scale(1.05);
+}
+.view-text {
+    margin-top: 10px;
+    font-size: 18px;
+    color: #0066cc;
+    cursor: pointer;
+}
+.view-text:hover {
+    text-decoration: underline;
+}
+.header-image {
+    width: 100%;
+    max-width: 1000px; /* Adjust this value to your preferred maximum width */
+    max-height: 300px;
+    display: block;
+    margin: 20px auto; /* This centers the image and adds some vertical space */
+}
+/* General styling for the map and elements */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    overflow: hidden; /* Prevent scrolling */
+}
+
+header {
+    text-align: center;
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    height: 50px; /* Set a fixed height for the header */
+}
+
+#map {
+    height: calc(100vh - 50px); /* Full height minus the header height */
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+#map-container {
+    display: none; /* Initially hide the map container */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+/* Legend styling */
+.info.legend {
+    background: rgb(245, 241, 241);
+    padding: 6px 8px;
+    font: 14px/16px Arial, Helvetica, sans-serif;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    line-height: 18px;
+    color: #555;
+    max-width: 200px;
+}
+
+.info.legend h4 {
+    margin: 0 0 5px;
+    color: #777;
+}
+
+.info.legend i {
+    width: 10px;
+    height: 10px;
+    float: left;
+    margin-right: 8px;
+    opacity: 0.7;
+}
+
+.info.legend .note {
+    word-wrap: break-word;
+    white-space: normal;
+}
+/* Style the radio buttons */
+.leaflet-control-layers input[type="radio"] {
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+    vertical-align: middle;
+}
+
+/* Style the labels */
+.leaflet-control-layers label {
+    font-size: 18px;
+    vertical-align: middle;
+}
+#controls {
+    position: absolute;
+    top: 50px;
+    right: 10px;
+    background: white;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    z-index: 1000;
+}
+
+.large-radio {
+    display: block;
+    font-size: 14px;
+}
+
+.large-radio input[type="radio"] {
+    margin-right: 10px;
+}
